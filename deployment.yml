@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: http-performance
+spec:
+  selector:
+    matchLabels:
+      app: http-performance
+  template:
+    metadata:
+      labels:
+        app: http-performance
+    spec:
+      containers:
+      - name: http-performance
+        image: http-performance
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            memory: 32M
