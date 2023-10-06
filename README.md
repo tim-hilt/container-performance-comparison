@@ -123,3 +123,32 @@ Running 30s test @ http://localhost:8080
 Requests/sec:  17427.49
 Transfer/sec:      2.18MB
 ```
+
+### Native - actix
+
+```
+Running 30s test @ http://localhost:8080
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     9.25ms   22.14ms 291.41ms   91.73%
+    Req/Sec    17.10k     6.02k  120.98k    85.85%
+  6112489 requests in 30.09s, 512.98MB read
+  Socket errors: connect 0, read 381, write 0, timeout 0
+Requests/sec: 203133.20
+Transfer/sec:     17.05MB
+```
+
+### Native - rocket
+
+```
+Running 30s test @ http://localhost:8000
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.23ms    6.41ms 254.09ms   96.84%
+    Req/Sec    13.38k     1.45k   47.20k    87.34%
+  4791067 requests in 30.10s, 1.11GB read
+  Socket errors: connect 0, read 373, write 0, timeout 0
+Requests/sec: 159194.28
+Transfer/sec:     37.65MB
+```
+
